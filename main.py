@@ -22,14 +22,14 @@ def ani():
 	
 x=os.system("dialog  --backtitle 'ANAGRAM GAME' --title 'ANAGRAM GAME ' --yesno 'Lets see whether you can play with letters to make meaningfull words.\nThe game is as follows\n\n\nGiven the letter in a jumbled manner , you need to make a meaning full word from it.??\n\n\nWANT TO PLAY ' 20 50")
 if x!= 0:
-	os.system("dialog --backtitle 'ANAGRAM GAME' --msgbox 'Terminating the program!\nThanks for using' 10 40 ")
+	os.system("dialog --backtitle 'ANAGRAM GAME' --infobox 'Terminating the program!\nThanks for using my game\n\n\n BY ADARSH' 10 40 ")
 	time.sleep(0.4)
 	exit()
 	
 #time.sleep(0.5)
 x=os.system("dialog --backtitle \"USER DIFICULTY LEVEL\" --radiolist \"CHOOSE AS YOU DESIRE\" 10 40 3  1 EASY on 2 MEDIUM off 3 HARD off 2>/usr/tmp/choice.txt")
 if x!=0:
-	os.system("dialog --backtitle \"ANAGRAM GAME\" --msgbox 'Terminating the program!\nThanks for using' 10 40")
+	os.system("dialog --backtitle \"ANAGRAM GAME\" --infobox 'Terminating the program!\nThanks for using my game\nBY ADARSH' 10 40")
 	time.sleep(0.4)
 	exit()
 loc=""
@@ -79,7 +79,7 @@ while life>=0 :
 #	print word
 	x=os.system("dialog --backtitle 'ANAGRAM GAME' --title 'LEVEL {}     SCORE {}     LIFE {}' --inputbox 'The letters are {}\n\n\n\nEnter a possible word made of these characters' 20 50 2>/usr/tmp/ans.txt".format(level,yscore,life,shuffle))
 	if x!=0:
-		os.system("dialog --backtitle \"ANAGRAM GAME\" --msgbox 'Terminating the program!\nThanks for using' 10 40")
+		os.system("dialog --backtitle \"ANAGRAM GAME\" --infobox 'Terminating the program!\nThanks for using my game\n\n\nBY ADARSH' 10 40")
 		time.sleep(0.4)
 		exit()
 	fr=open("/usr/tmp/ans.txt","r")
@@ -110,7 +110,7 @@ while life>=0 :
 		time.sleep(0.4)
 		x=os.system("dialog --backtitle 'ANAGRAM GAME' --title 'LEVEL {}     SCORE {}     LIFE {}' --inputbox 'The letters are {}\n\n\n\nEnter a possible word made of these characters' 20 50 2>/usr/tmp/ans.txt".format(level,yscore,life,shuffle))
 		if x!=0:
-			os.system("dialog --backtitle \"ANAGRAM GAME\" --msgbox 'Terminating the program!\nThanks for using' 10 40")
+			os.system("dialog --backtitle \"ANAGRAM GAME\" --infobox 'Terminating the program!\nThanks for using my game\n\n\nBY ADARSH' 10 40")
 			time.sleep(0.4)
 			exit()		
 		fr=open("/usr/tmp/ans.txt","r")
