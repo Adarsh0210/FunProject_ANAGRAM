@@ -36,6 +36,8 @@ loc=""
 fh=open("/usr/tmp/choice.txt","r+")
 choice=fh.readlines()
 fh.close()	
+os.system("mkdir /PROJECT_ANAGRAM")
+os.system("cp words.txt /ROJECT_ANAGRAM/ ")
 loc="/PROJECT_ANAGRAM/words.txt"
 os.system("rm -rf '/usr/tmp/choice.txt'")
 #print loc
